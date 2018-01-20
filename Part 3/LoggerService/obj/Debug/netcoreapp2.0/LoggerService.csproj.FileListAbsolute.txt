@@ -1,0 +1,33 @@
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\Contracts.dll
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.csprojResolveAssemblyReference.cache
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.AssemblyInfoInputs.cache
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.AssemblyInfo.cs
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.deps.json
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.dll
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.pdb
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\Contracts.pdb
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.dll
+D:\Projects\Blog-AccountOwner\Project\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.pdb
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.deps.json
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.dll
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.pdb
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\Contracts.dll
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\Contracts.pdb
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.csprojResolveAssemblyReference.cache
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.AssemblyInfoInputs.cache
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.AssemblyInfo.cs
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.dll
+D:\Projects\Blog-AccountOwner\Project\BlogRepository\Post_Part3\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.pdb
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.deps.json
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.dll
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\LoggerService.pdb
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\Contracts.dll
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\bin\Debug\netcoreapp2.0\Contracts.pdb
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.csprojResolveAssemblyReference.cache
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.csproj.CoreCompileInputs.cache
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.AssemblyInfoInputs.cache
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.AssemblyInfo.cs
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.dll
+E:\blog\Marinko\Part3 .NET Core\AccountOwnerServer\LoggerService\obj\Debug\netcoreapp2.0\LoggerService.pdb
