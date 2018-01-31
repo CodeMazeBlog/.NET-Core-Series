@@ -6,3 +6,19 @@
 /Part 3/Contracts/bin
 /Part 3/LoggerService/obj
 /Part 3/LoggerService/bin
+
+
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+/Part 4/Contracts/obj
+/Part 4/Contracts/bin
+/Part 4/Entities/obj
+/Part 4/Entities/bin
+/Part 4/LoggerService/obj
+/Part 4/LoggerService/bin
+/Part 4/Repository/obj
+/Part 4/Repository/bin
