@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Entities.Models
 {
-    [Table("Owner")]
+    [Table("owner")]
     public class Owner: IEntity
     {
         [Key]
