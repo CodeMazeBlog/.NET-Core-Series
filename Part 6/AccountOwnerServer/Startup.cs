@@ -12,6 +12,7 @@ using AccountOwnerServer.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using System.IO;
 using NLog.Extensions.Logging;
+using Contracts;
 
 namespace AccountOwnerServer
 {
