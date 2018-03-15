@@ -61,7 +61,7 @@ namespace AccountOwnerServer.Controllers
             }
         }
 
-        [HttpGet("OwnerDetails/{id}")]
+        [HttpGet("{id}/account")]
         public IActionResult GetOwnerWithDetails(Guid id)
         {
             try
