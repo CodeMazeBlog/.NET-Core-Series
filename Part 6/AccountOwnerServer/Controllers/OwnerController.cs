@@ -3,6 +3,7 @@ using Entities.Extensions;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 
 namespace AccountOwnerServer.Controllers
 {
@@ -159,6 +160,12 @@ namespace AccountOwnerServer.Controllers
                 {
                     _logger.LogError($"Owner with id: {id}, hasn't been found in db.");
                     return NotFound();
+                }
+
+                if(_repository.Account.AccountsByOwner(id).Any())
+                {
+                    _logger.LogError($"Cannot delete owner with id: {id}. It has related accounts. Delete those accounts first");
+                    return BadRequest("Cannot delete owner. It has related accounts. Delete those accounts first");
                 }
 
                 _repository.Owner.DeleteOwner(owner);
