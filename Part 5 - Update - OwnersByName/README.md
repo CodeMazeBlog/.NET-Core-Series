@@ -1,3 +1,3 @@
 # .NET-Core-Series
-## Part 5 of the .NET Core series on CodeMaze blog
-https://code-maze.com/net-core-web-development-part5/
+## Extension for the part 5 of the .NET Core series on CodeMaze blog as an answer to the readers comment: http://disq.us/p/1rdnee2
+
