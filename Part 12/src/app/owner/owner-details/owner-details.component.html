@@ -1,0 +1,38 @@
+<div class="well">
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Owner name:</strong>
+    </div>
+    <div class="col-md-3">
+      {{owner?.name}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Date of birth:</strong>
+    </div>
+    <div class="col-md-3">
+      {{owner?.dateOfBirth | date: 'dd/MM/yyyy'}}
+    </div>
+  </div>
+  <div class="row" *ngIf='owner?.accounts.length <= 2; else advancedUser'>
+    <div class="col-md-3">
+      <strong>Type of user:</strong>
+    </div>
+    <div class="col-md-3">
+      <span class="text-success">Begginer user.</span>
+    </div>
+  </div>
+  <ng-template #advancedUser>
+    <div class="row">
+      <div class="col-md-3">
+        <strong>Type of user:</strong>
+      </div>
+      <div class="col-md-3">
+        <span class="text-info">Advanced user.</span>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<app-ownersaccounts [accounts]="owner?.accounts"></app-ownersaccounts>
