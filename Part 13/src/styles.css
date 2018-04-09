@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.ui-widget-header {
+    color: #564040;
+}
+
+em{
+    color: #e71515;
+    font-weight: bold;
+}
