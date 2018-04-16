@@ -1,0 +1,18 @@
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+    font-size: 30px;
+    text-align: center;
+}
+ 
+.modal-body p {
+    text-align: center;
+    margin-top: 10px;
+}
+ 
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 500px;
+        margin: 20% auto;
+    }
+}
