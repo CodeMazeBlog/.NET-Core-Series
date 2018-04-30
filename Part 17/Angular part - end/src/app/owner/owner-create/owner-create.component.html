@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <form [formGroup]="ownerForm" autocomplete="off" novalidate (ngSubmit)="createOwner(ownerForm.value)">
+    <div class="form-horizontal well">
+
+      <div class="form-group">
+        <label for="name" class="control-label col-md-2">Name of the owner: </label>
+        <div class="col-md-5">
+          <input type="text" formControlName="name" id="name" class="form-control" />
+        </div>
+        <div class="col-md-5">
+          <em *ngIf="validateControl('name') && hasError('name', 'required')">Name is required</em>
+          <em *ngIf="validateControl('name') && hasError('name', 'maxlength')">Maximum allowed length is 60 characters.</em>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfBirth" class="control-label col-md-2">Date of birth: </label>
+        <div class="col-md-5">
+          <input type="text" formControlName="dateOfBirth" id="dateOfBirth" class="form-control" appDatepicker 
+                (change)="executeDatePicker($event)" readonly/>
+        </div>
+        <div class="col-md-5">
+          <em *ngIf="validateControl('dateOfBirth') && hasError('dateOfBirth', 'required')">Date of birth is required</em>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address" class="control-label col-md-2">Address: </label>
+        <div class="col-md-5">
+          <input type="text" formControlName="address" id="address" class="form-control" />
+        </div>
+        <div class="col-md-5">
+          <em *ngIf="validateControl('address') && hasError('address', 'required')">Address is required</em>
+          <em *ngIf="validateControl('address') && hasError('address', 'maxlength')">Maximum allowed length is 100 characters.</em>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="form-group">
+          <div class="col-md-offset-5 col-md-1">
+              <button type="submit" class="btn btn-info" [disabled]="!ownerForm.valid">Save</button>
+          </div>
+          <div class="col-md-1">
+              <button type="button" class="btn btn-danger" (click)="redirectToOwnerList()">Cancel</button>
+          </div>
+      </div>
+      
+    </div>
+  </form>
+
+  <app-success-modal [modalHeaderText]="'Success message'" 
+  [modalBodyText]="'Action completed successfully'" [okButtonText]="'OK'" 
+  (redirectOnOK)="redirectToOwnerList()"></app-success-modal>
+
+  <app-error-modal [modalHeaderText]="'Error message'" 
+  [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+
+</div>
