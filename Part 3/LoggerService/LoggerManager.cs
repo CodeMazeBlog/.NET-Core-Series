@@ -1,6 +1,5 @@
 ﻿using Contracts;
 using NLog;
-using System;
 
 namespace LoggerService
 {
