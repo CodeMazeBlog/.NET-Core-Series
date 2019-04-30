@@ -39,5 +39,10 @@ namespace Repository
         {
             _repoContext = repositoryContext;
         }
+
+        public void Save()
+        {
+            _repoContext.SaveChanges();
+        }
     }
 }
