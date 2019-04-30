@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +18,17 @@ namespace Repository
             this.RepositoryContext = repositoryContext;
         }
 
-        public IEnumerable<T> FindAll()
+        public IQueryable<T> FindAll()
         {
-            return this.RepositoryContext.Set<T>();
+            return this.RepositoryContext.Set<T>()
+                .AsNoTracking();
         }
 
-        public IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression)
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression)
         {
-            return this.RepositoryContext.Set<T>().Where(expression);
+            return this.RepositoryContext.Set<T>()
+                .Where(expression)
+                .AsNoTracking();
         }
 
         public void Create(T entity)
@@ -40,11 +44,6 @@ namespace Repository
         public void Delete(T entity)
         {
             this.RepositoryContext.Set<T>().Remove(entity);
-        }
-
-        public void Save()
-        {
-            this.RepositoryContext.SaveChanges();
         }
     }
 }
