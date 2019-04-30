@@ -18,7 +18,8 @@ namespace Repository
         public IEnumerable<Owner> GetAllOwners()
         {
             return FindAll()
-                .OrderBy(ow => ow.Name);
+                .OrderBy(ow => ow.Name)
+                .ToList();
         }
 
         public Owner GetOwnerById(Guid ownerId)
