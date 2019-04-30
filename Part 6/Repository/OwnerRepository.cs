@@ -19,7 +19,8 @@ namespace Repository
         public IEnumerable<Owner> GetAllOwners()
         {
             return FindAll()
-                .OrderBy(ow => ow.Name);
+                .OrderBy(ow => ow.Name)
+                .ToList();
         }
 
         public Owner GetOwnerById(Guid ownerId)
@@ -42,20 +43,17 @@ namespace Repository
         {
             owner.Id = Guid.NewGuid();
             Create(owner);
-            Save();
         }
 
         public void UpdateOwner(Owner dbOwner, Owner owner)
         {
             dbOwner.Map(owner);
             Update(dbOwner);
-            Save();
         }
 
         public void DeleteOwner(Owner owner)
         {
             Delete(owner);
-            Save();
         }
     }
 }

@@ -106,6 +106,7 @@ namespace AccountOwnerServer.Controllers
                 }
 
                 _repository.Owner.CreateOwner(owner);
+                _repository.Save();
 
                 return CreatedAtRoute("OwnerById", new { id = owner.Id }, owner);
             }
@@ -141,6 +142,7 @@ namespace AccountOwnerServer.Controllers
                 }
 
                 _repository.Owner.UpdateOwner(dbOwner, owner);
+                _repository.Save();
 
                 return NoContent();
             }
@@ -170,6 +172,7 @@ namespace AccountOwnerServer.Controllers
                 }
 
                 _repository.Owner.DeleteOwner(owner);
+                _repository.Save();
 
                 return NoContent();
             }
