@@ -4,6 +4,7 @@ import { OwnerForCreation } from './../../_interfaces/owner-for-creation.model';
 import { ErrorHandlerService } from './../../shared/services/error-handler.service';
 import { RepositoryService } from './../../shared/services/repository.service';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-owner-create',
@@ -15,7 +16,7 @@ export class OwnerCreateComponent implements OnInit {
 
   public ownerForm: FormGroup;
 
-  constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
+  constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router, private datePipe: DatePipe) { }
 
   ngOnInit() {
     this.ownerForm = new FormGroup({
@@ -52,7 +53,7 @@ export class OwnerCreateComponent implements OnInit {
   private executeOwnerCreation(ownerFormValue) {
     let owner: OwnerForCreation = {
       name: ownerFormValue.name,
-      dateOfBirth: ownerFormValue.dateOfBirth,
+      dateOfBirth: this.datePipe.transform(ownerFormValue.dateOfBirth, 'yyyy-MM-dd'),
       address: ownerFormValue.address
     }
 
