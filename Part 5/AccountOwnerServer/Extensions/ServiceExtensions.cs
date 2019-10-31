@@ -18,16 +18,15 @@ namespace AccountOwnerServer.Extensions
                 options.AddPolicy("CorsPolicy",
                     builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials());
+                    .AllowAnyHeader());
             });
         }
 
         public static void ConfigureIISIntegration(this IServiceCollection services)
         {
-            services.Configure<IISOptions>(options => 
+            services.Configure<IISOptions>(options =>
             {
-                
+
             });
         }
 
@@ -36,15 +35,15 @@ namespace AccountOwnerServer.Extensions
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
 
-        public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config)
-        {
-            var connectionString = config["mysqlconnection:connectionString"];
-            services.AddDbContext<RepositoryContext>(o => o.UseMySql(connectionString));
+        public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config) 
+        { 
+            var connectionString = config["mysqlconnection:connectionString"]; 
+            services.AddDbContext<RepositoryContext>(o => o.UseMySql(connectionString)); 
         }
 
-        public static void ConfigureRepositoryWrapper(this IServiceCollection services)
-        {
-            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+        public static void ConfigureRepositoryWrapper(this IServiceCollection services) 
+        { 
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>(); 
         }
     }
 }
