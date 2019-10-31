@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Contracts
 {
-    public interface IAccountRepository:IRepositoryBase<Account>
+    public interface IAccountRepository : IRepositoryBase<Account>
     {
         IEnumerable<Account> AccountsByOwner(Guid ownerId);
     }
