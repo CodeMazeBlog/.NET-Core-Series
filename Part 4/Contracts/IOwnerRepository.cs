@@ -1,10 +1,8 @@
 ﻿using Entities.Models;
-using System;
-using System.Collections.Generic;
 
 namespace Contracts
 {
-    public interface IOwnerRepository:IRepositoryBase<Owner>
+    public interface IOwnerRepository : IRepositoryBase<Owner>
     {
     }
 }
