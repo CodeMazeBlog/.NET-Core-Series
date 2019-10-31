@@ -14,16 +14,15 @@ namespace AccountOwnerServer.Extensions
                 options.AddPolicy("CorsPolicy",
                     builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials());
+                    .AllowAnyHeader());
             });
         }
 
         public static void ConfigureIISIntegration(this IServiceCollection services)
         {
-            services.Configure<IISOptions>(options => 
+            services.Configure<IISOptions>(options =>
             {
-                
+
             });
         }
 
@@ -31,5 +30,6 @@ namespace AccountOwnerServer.Extensions
         {
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
+
     }
 }
