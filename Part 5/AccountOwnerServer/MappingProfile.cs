@@ -12,8 +12,6 @@ namespace AccountOwnerServer
             CreateMap<Owner, OwnerDto>();
 
             CreateMap<Account, AccountDto>();
-
-            CreateMap<Owner, OwnerDto>();
         }
     }
 }
