@@ -9,10 +9,10 @@ export class ErrorModalComponent implements OnInit {
   @Input() public modalHeaderText: string;
   @Input() public modalBodyText: string;
   @Input() public okButtonText: string;
-  
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

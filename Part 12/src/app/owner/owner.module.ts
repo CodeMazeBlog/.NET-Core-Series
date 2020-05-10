@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
  
 import { OwnerListComponent } from './owner-list/owner-list.component';
 import { OwnerDetailsComponent } from './owner-details/owner-details.component';
-import { OwnersaccountsComponent } from './owner-details/ownersaccounts/ownersaccounts.component';
  
 @NgModule({
   imports: [
@@ -18,8 +17,7 @@ import { OwnersaccountsComponent } from './owner-details/ownersaccounts/ownersac
   ],
   declarations: [
     OwnerListComponent,
-    OwnerDetailsComponent,
-    OwnersaccountsComponent
+    OwnerDetailsComponent
   ]
 })
 export class OwnerModule { }

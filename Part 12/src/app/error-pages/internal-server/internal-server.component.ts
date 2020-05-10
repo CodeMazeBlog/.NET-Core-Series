@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InternalServerComponent implements OnInit {
   public errorMessage: string = "500 SERVER ERROR, CONTACT ADMINISTRATOR!!!!";
-
+  
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

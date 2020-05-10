@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ErrorHandlerService } from 'app/shared/services/error-handler.service';
-import { RepositoryService } from 'app/shared/services/repository.service';
+import { ErrorHandlerService } from './../../shared/services/error-handler.service';
+import { RepositoryService } from './../../shared/services/repository.service';
 import { Owner } from './../../_interfaces/owner.model';
 import { Router, ActivatedRoute } from '@angular/router';
  
@@ -20,9 +20,9 @@ constructor(private repository: RepositoryService, private errorHandler: ErrorHa
     this.getOwnerById();
   }
    
-  private getOwnerById() {
-    let ownerId: string = this.activeRoute.snapshot.params['id'];
-    let ownerByIdUrl: string = `api/owner/${ownerId}`;
+  private getOwnerById = () => {
+    const ownerId: string = this.activeRoute.snapshot.params['id'];
+    const ownerByIdUrl: string = `api/owner/${ownerId}`;
    
     this.repository.getData(ownerByIdUrl)
       .subscribe(res => {
@@ -34,12 +34,12 @@ constructor(private repository: RepositoryService, private errorHandler: ErrorHa
       })
   }
    
-  public redirectToOwnerList() {
+  public redirectToOwnerList = () => {
     this.router.navigate(['/owner/list']);
   }
 
-  public deleteOwner() {
-    let deleteUrl: string = `api/owner/${this.owner.id}`;
+  public deleteOwner = () => {
+    const deleteUrl: string = `api/owner/${this.owner.id}`;
     this.repository.delete(deleteUrl)
       .subscribe(res => {
         $('#successModal').modal();
@@ -50,3 +50,4 @@ constructor(private repository: RepositoryService, private errorHandler: ErrorHa
       })
   }
 }
+

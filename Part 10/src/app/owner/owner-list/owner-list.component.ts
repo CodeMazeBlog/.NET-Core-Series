@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RepositoryService } from 'app/shared/services/repository.service';
+import { RepositoryService } from './../../shared/services/repository.service';
 import { Owner } from './../../_interfaces/owner.model';
 
 @Component({
@@ -12,15 +12,15 @@ export class OwnerListComponent implements OnInit {
 
   constructor(private repository: RepositoryService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getAllOwners();
   }
 
-  public getAllOwners() {
+  public getAllOwners = () => {
     let apiAddress: string = "api/owner";
     this.repository.getData(apiAddress)
-      .subscribe(res => {
-        this.owners = res as Owner[];
-      })
+    .subscribe(res => {
+      this.owners = res as Owner[];
+    })
   }
 }
