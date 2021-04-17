@@ -2,7 +2,7 @@ import { Account } from './account.model';
 export interface Owner{
     id: string;
     name: string;
-    dateOfBirth: Date;
+    dateOfBirth: string;
     address: string;
 
     accounts?: Account[];
