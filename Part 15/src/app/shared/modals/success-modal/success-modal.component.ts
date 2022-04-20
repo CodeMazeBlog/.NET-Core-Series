@@ -1,22 +1,25 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BsModalRef } from 'ngx-bootstrap/modal';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-success-modal',
   templateUrl: './success-modal.component.html',
-  styleUrls: ['./success-modal.component.css', '../modal-shared.component.css']
+  styleUrls: ['./success-modal.component.css']
 })
 export class SuccessModalComponent implements OnInit {
-  @Input() public modalHeaderText: string; 
-  @Input() public modalBodyText: string; 
-  @Input() public okButtonText: string; 
-  @Output() public redirectOnOK = new EventEmitter();
+  modalHeaderText: string;
+  modalBodyText: string;
+  okButtonText: string;
+  redirectOnOk: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private bsModalRef: BsModalRef) { }
 
   ngOnInit(): void {
   }
 
-  public emitEvent = () => {
-     this.redirectOnOK.emit();
+  onOkClicked = () => {
+    this.redirectOnOk.emit();
+    this.bsModalRef.hide();
   }
+
 }
