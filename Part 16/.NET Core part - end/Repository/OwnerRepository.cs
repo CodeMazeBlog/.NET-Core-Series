@@ -2,9 +2,6 @@
 using Entities;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Repository
 {
@@ -15,11 +12,11 @@ namespace Repository
         { 
         }
 
-        public IEnumerable<Owner> GetAllOwners() 
-        { 
+        public IEnumerable<Owner> GetAllOwners()
+        {
             return FindAll()
                 .OrderBy(ow => ow.Name)
-                .ToList(); 
+                .ToList();
         }
 
         public Owner GetOwnerById(Guid ownerId)
@@ -35,19 +32,10 @@ namespace Repository
                 .FirstOrDefault();
         }
 
-        public void CreateOwner(Owner owner)
-        {
-            Create(owner);
-        }
+        public void CreateOwner(Owner owner) => Create(owner);
 
-        public void UpdateOwner(Owner owner)
-        {
-            Update(owner);
-        }
+        public void UpdateOwner(Owner owner) => Update(owner);
 
-        public void DeleteOwner(Owner owner)
-        {
-            Delete(owner);
-        }
+        public void DeleteOwner(Owner owner) => Delete(owner);
     }
 }

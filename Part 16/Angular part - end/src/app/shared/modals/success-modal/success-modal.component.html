@@ -1,18 +1,13 @@
-<div id="successModal" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{{modalHeaderText}}</h5>
-        <button type="button" class="close" data-dismiss="modal" (click)="emitEvent()" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>{{modalBodyText}}</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="emitEvent()">{{okButtonText}}</button>
-      </div>
-    </div>
-   </div>
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{modalHeaderText}}</h4>
+  <button type="button" class="btn-close close pull-right" 
+  aria-label="Close" (click)="onOkClicked()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  {{modalBodyText}}
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="onOkClicked()">{{okButtonText}}</button>
 </div>

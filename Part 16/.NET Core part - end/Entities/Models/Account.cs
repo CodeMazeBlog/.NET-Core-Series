@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.Models
@@ -14,12 +13,10 @@ namespace Entities.Models
         public DateTime DateCreated { get; set; }
 
         [Required(ErrorMessage = "Account type is required")] 
-        public string AccountType { get; set; }
-
-        [Required(ErrorMessage = "Owner Id is required")] 
+        public string? AccountType { get; set; }
 
         [ForeignKey(nameof(Owner))]
         public Guid OwnerId { get; set; }
-        public Owner Owner { get; set; }
+        public Owner? Owner { get; set; }
     }
 }

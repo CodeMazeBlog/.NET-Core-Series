@@ -1,8 +1,10 @@
-import { ErrorHandlerService } from './../../shared/services/error-handler.service';
 import { Component, OnInit } from '@angular/core';
-import { RepositoryService } from './../../shared/services/repository.service';
-import { Owner } from './../../_interfaces/owner.model';
 import { Router } from '@angular/router';
+
+import { Owner } from './../../_interfaces/owner.model';
+import { OwnerRepositoryService } from './../../shared/services/owner-repository.service';
+import { ErrorHandlerService } from './../../shared/services/error-handler.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-owner-list',
@@ -10,24 +12,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./owner-list.component.css']
 })
 export class OwnerListComponent implements OnInit {
-  public owners: Owner[];
-  public errorMessage: string = '';
+  owners: Owner[];
+  errorMessage: string = '';
 
-  constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
+  constructor(private repository: OwnerRepositoryService, private errorHandler: ErrorHandlerService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getAllOwners();
   }
 
-  public getAllOwners = () => {
-    let apiAddress: string = "api/owner";
-    this.repository.getData(apiAddress)
-    .subscribe(res => {
-      this.owners = res as Owner[];
-    },
-    (error) => {
-      this.errorHandler.handleError(error);
-      this.errorMessage = this.errorHandler.errorMessage;
+  private getAllOwners = () => {
+    const apiAddress: string = 'api/owner';
+    this.repository.getOwners(apiAddress)
+    .subscribe({
+      next: (own: Owner[]) => this.owners = own,
+      error: (err: HttpErrorResponse) => {
+          console.log(err);
+          this.errorHandler.handleError(err);
+          this.errorMessage = this.errorHandler.errorMessage;
+      }
     })
   }
 
@@ -42,7 +46,8 @@ export class OwnerListComponent implements OnInit {
   }
 
   public redirectToDeletePage = (id) => { 
-    const deleteUrl: string = `/owner/delete/${id}`;
+    const deleteUrl: string = `/owner/delete/${id}`; 
     this.router.navigate([deleteUrl]); 
   }
+
 }
