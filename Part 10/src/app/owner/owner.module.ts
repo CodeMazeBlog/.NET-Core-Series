@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
- 
+
+import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerListComponent } from './owner-list/owner-list.component';
- 
+
+
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      { path: 'list', component: OwnerListComponent }
-    ])
-  ],
   declarations: [
     OwnerListComponent
+  ],
+  imports: [
+    CommonModule,
+    OwnerRoutingModule
   ]
 })
 export class OwnerModule { }
